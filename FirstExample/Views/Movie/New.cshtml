@@ -1,0 +1,46 @@
+﻿@model FirstExample.ViewModels.MovieViewModel
+@{
+                /**/
+
+                ViewBag.Title = "Movie";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+@using (Html.BeginForm("Save", "Movie"))
+{
+    @Html.ValidationSummary(true, "Please fix in the following errors");
+    <div class="form-group">
+        @Html.LabelFor(c => c.Movie.Name)
+        @Html.TextBoxFor(c => c.Movie.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Movie.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Movie.ReleaseDate)
+        @Html.TextBoxFor(c => c.Movie.ReleaseDate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Movie.ReleaseDate)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Movie.DateAdd)
+        @Html.TextBoxFor(c => c.Movie.DateAdd, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Movie.DateAdd)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movie.GenreId)
+        @Html.DropDownListFor(m => m.Movie.GenreId, new SelectList(Model.Genres, "Id", "Name"), "Select Genre", new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Movie.GenreId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Movie.Stock)
+        @Html.TextBoxFor(c => c.Movie.Stock, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Movie.Stock)
+    </div>
+    @Html.HiddenFor(m => m.Movie.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+@section scripts
+{
+    @Scripts.Render("ender(“~/bundles/jqueryva")
+
+    }

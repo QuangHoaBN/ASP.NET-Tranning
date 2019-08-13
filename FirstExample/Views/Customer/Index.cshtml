@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Customers</h2>
+@if (Model==null)
+{
+    <p>We don't have any customer yet!</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Customer</th>
+                <th>Discount Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cus in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink((string)cus.Name, "Edit", "Customer", new { id = cus.Id }, null)</td>
+                    <td>@cus.membership.DiscountRate</td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+}
+
