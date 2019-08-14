@@ -12,10 +12,10 @@ namespace FirstExample.Controllers
     public class MovieController : Controller
     {
         // GET: Movie/Random
-        private ProductDbContext _context;
+        private ApplicationDbContext _context;
         public MovieController()
         {
-            _context = new ProductDbContext();
+            _context = new ApplicationDbContext();
         }
         public ActionResult New()
         {

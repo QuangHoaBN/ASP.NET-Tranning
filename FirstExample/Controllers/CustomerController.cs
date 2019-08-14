@@ -13,10 +13,10 @@ namespace FirstExample.Controllers
     public class CustomerController : Controller
     {
         // GET: Customer/Index
-        private ProductDbContext _context;
+        private ApplicationDbContext _context;
         public CustomerController()
         {
-            _context = new ProductDbContext();
+            _context = new ApplicationDbContext();
         }
         protected override void Dispose(bool disposing)
         {

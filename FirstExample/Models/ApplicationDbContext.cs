@@ -5,9 +5,9 @@ namespace FirstExample.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class ProductDbContext : DbContext
+    public partial class ApplicationDbContext : DbContext
     {
-        public ProductDbContext()
+        public ApplicationDbContext()
             : base("name=ProductDbContext")
         {
         }
