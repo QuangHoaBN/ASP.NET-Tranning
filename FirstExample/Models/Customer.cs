@@ -13,7 +13,7 @@ namespace FirstExample.Models
         [StringLength(500)]
         public string Name { get; set; }
         public Boolean IsSubscribedToNewsLetter { get; set; }
-        public MembershipType membership { get; set; }
+        public MembershipType MembershipType { get; set; }
         [Display(Name ="Membership Types")]
         public byte MembershipTypeId { get; set; }
         [Display(Name ="Date Of Birth")]

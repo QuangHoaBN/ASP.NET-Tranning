@@ -92,7 +92,6 @@ C:\Users\ronna\source\repos\FirstExample\FirstExample\obj\Debug\FirstExample.Mig
 C:\Users\ronna\source\repos\FirstExample\FirstExample\obj\Debug\FirstExample.Migrations.AddStockMovie.resources
 C:\Users\ronna\source\repos\FirstExample\FirstExample\obj\Debug\FirstExample.Migrations.AddDataStock.resources
 C:\Users\ronna\source\repos\FirstExample\FirstExample\obj\Debug\FirstExample.Migrations.AddMember.resources
-C:\Users\ronna\source\repos\FirstExample\FirstExample\obj\Debug\FirstExample.csprojAssemblyReference.cache
 C:\Users\ronna\source\repos\FirstExample\FirstExample\obj\Debug\FirstExample.Migrations.ConfigMovie.resources
 C:\Users\ronna\source\repos\FirstExample\FirstExample\obj\Debug\FirstExample.Migrations.Config.resources
 C:\Users\ronna\source\repos\FirstExample\FirstExample\bin\System.Net.Http.Formatting.dll
@@ -103,3 +102,4 @@ C:\Users\ronna\source\repos\FirstExample\FirstExample\bin\System.Web.Http.xml
 C:\Users\ronna\source\repos\FirstExample\FirstExample\bin\System.Web.Http.WebHost.xml
 C:\Users\ronna\source\repos\FirstExample\FirstExample\bin\AutoMapper.dll
 C:\Users\ronna\source\repos\FirstExample\FirstExample\bin\AutoMapper.xml
+C:\Users\ronna\source\repos\FirstExample\FirstExample\obj\Debug\FirstExample.csprojAssemblyReference.cache

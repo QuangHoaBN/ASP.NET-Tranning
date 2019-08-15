@@ -15,7 +15,8 @@ namespace FirstExample.Dtos
         public string Name { get; set; }
         public Boolean IsSubscribedToNewsLetter { get; set; }
         public byte MembershipTypeId { get; set; }
-        [Min18YearsIfAMember]
+        public MembershipTypeDto MembershipType { get; set; }
+        //[Min18YearsIfAMember]
         public DateTime? DOB { get; set; }
     }
 }

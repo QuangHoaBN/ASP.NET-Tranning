@@ -2,11 +2,10 @@
 using FirstExample.Dtos;
 using FirstExample.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
+using System.Data.Entity;
 
 namespace FirstExample.Controllers.API
 {
@@ -18,9 +17,13 @@ namespace FirstExample.Controllers.API
             _context = new ApplicationDbContext();
         }
         // GET api/customers
-        public IEnumerable<CustomerDto> GetCustomers()
+        public IHttpActionResult GetCustomers()
         {
-            return _context.Customers.ToList().Select(Mapper.Map<Customer,CustomerDto>);
+            var cusDtos= _context.Customers
+                .Include(c=>c.MembershipType)
+                .ToList()
+                .Select(Mapper.Map<Customer,CustomerDto>);
+            return Ok(cusDtos);
         }
         // GET /api/customer/id
         public IHttpActionResult GetCustomer(int id)
